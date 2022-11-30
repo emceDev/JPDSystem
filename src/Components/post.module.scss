@@ -1,0 +1,23 @@
+.Post {
+	margin: 50px 111px 150px 111px;
+	h2 {
+		margin: 20px 0px 20px 10px;
+		text-transform: uppercase;
+	}
+}
+.ImgPCont {
+	// background-color: darkorange;
+	.ImgContainer {
+		// background-color: darkblue;
+		float: right;
+		margin: 0px 0px 5px 20px;
+		img {
+			width: 400px;
+			height: auto;
+		}
+	}
+	p {
+		text-align: justify;
+		font-size: 20px;
+	}
+}

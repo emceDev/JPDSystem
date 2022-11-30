@@ -1,0 +1,29 @@
+.Footer {
+	min-height: 40vh;
+	width: 100vw;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.Logo {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		max-width: 100%;
+	}
+}
+
+.LogosContainer {
+	display: flex;
+	justify-content: center;
+	width: 60%;
+	overflow-x: scroll;
+	background-color: rebeccapurple;
+	div {
+		padding: 1%;
+	}
+}
