@@ -1,7 +1,11 @@
+@use "../styles/variables.scss" as *;
+
 .Footer {
 	min-height: 40vh;
 	width: 100vw;
-	background-color: white;
+	// background-color: $gray;
+	background-color: $granatowy;
+	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -21,8 +25,8 @@
 	display: flex;
 	justify-content: center;
 	width: 60%;
-	overflow-x: scroll;
-	background-color: rebeccapurple;
+	overflow-x: hidden;
+	scrollbar-width: 1px;
 	div {
 		padding: 1%;
 	}

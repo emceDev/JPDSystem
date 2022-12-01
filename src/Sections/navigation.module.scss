@@ -1,5 +1,10 @@
+@use "../styles/variables.scss" as *;
 .Navigation {
-	background-color: darkcyan;
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	background-color: $granatowy;
 	display: flex;
 	align-items: center;
 	max-height: 15vh;
@@ -10,7 +15,10 @@
 	transition: all 1s;
 }
 .Logo {
-	background-color: aquamarine;
+	background-color: $lightblue;
+	h1 {
+		color: white;
+	}
 	width: 200px;
 	height: 100%;
 	display: flex;
@@ -20,9 +28,13 @@
 	margin-right: 50px;
 }
 .Buttons {
-	background-color: darkmagenta;
 	button {
-		height: 50px;
+		color: white;
+		font-size: 15px;
+		font-weight: 700;
+		height: 40px;
 		margin-right: 10px;
+		background-color: $lightblue;
+		border: 0px;
 	}
 }

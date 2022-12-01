@@ -1,5 +1,7 @@
+@use "../styles/variables.scss" as *;
 .Intercoms {
-	margin-top: 50px;
+	margin-top: 15vh;
+	color: $granatowy;
 	h1 {
 		margin-left: 80px;
 		text-transform: uppercase;

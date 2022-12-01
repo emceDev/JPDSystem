@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import { Gallery } from "./Components/Gallery";
 import { Intercoms } from "./Pages/Intercoms";
 import { Landing } from "./Pages/Landing";
@@ -8,9 +9,13 @@ function App() {
 	return (
 		<div className="App" id="App">
 			<Navigation />
-			<Landing />
-			{/* <Intercoms /> */}
-			{/* <Gallery /> */}
+
+			<Routes>
+				<Route path="/" element={<Landing />}></Route>
+				<Route path="/Domofony" element={<Intercoms />}></Route>
+				<Route path="/Galeria" element={<Gallery />}></Route>
+			</Routes>
+
 			<Footer />
 		</div>
 	);

@@ -32,7 +32,8 @@ export const Gallery = () => {
 	}, [choosen]);
 	return (
 		<div className={styles.Gallery}>
-			<h1>Gallery</h1>
+			<h1>Galeria</h1>
+
 			<div className={styles.ImgList}>
 				{images.map((img, index) => (
 					<GalleryImg
@@ -92,14 +93,14 @@ const Modal = (props) => {
 		<div className={styles.Modal} onClick={(e) => handleClick(e)}>
 			<div className={styles.Navs} onClick={(e) => e.stopPropagation()}>
 				<button onClick={() => (index - 1 > 0 ? setIndex(index - 1) : null)}>
-					{"<"}
+					<span class="material-symbols-outlined">arrow_back_ios_new</span>
 				</button>
 				<button
 					onClick={() =>
 						index + 1 < images.length ? setIndex(index + 1) : null
 					}
 				>
-					{">"}
+					<span class="material-symbols-outlined">arrow_forward_ios</span>
 				</button>
 				<button onClick={() => props.close()}>{"x"}</button>
 			</div>

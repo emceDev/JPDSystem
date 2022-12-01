@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "./navigation.module.scss";
 export const Navigation = () => {
 	useEffect(() => {
@@ -11,10 +12,17 @@ export const Navigation = () => {
 	return (
 		<div className={styles.Navigation} id="navigation">
 			<div className={styles.Logo}>
-				<h1>JPDSystem</h1>
+				<Link to="/">
+					<h1>JPDSystem</h1>
+				</Link>
 			</div>
 			<div className={styles.Buttons}>
-				<button>Domofony</button>
+				<Link to="/Domofony">
+					<button>Domofony</button>
+				</Link>
+				<Link to="/Galeria">
+					<button>Galeria </button>
+				</Link>
 				<button>Monitoring</button>
 				<button>Alarmy</button>
 				<button>Elektryka</button>

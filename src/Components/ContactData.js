@@ -4,7 +4,7 @@ export const ContactData = () => {
 		<div className={styles.ContactData}>
 			<div>
 				<div>
-					<h2>email</h2>
+					<h2>email:</h2>
 					<p>biuro@JPDSystem.pl</p>
 				</div>
 				<div>
@@ -12,11 +12,11 @@ export const ContactData = () => {
 					<p>xxx-xxx-xxx</p>
 				</div>
 				<div>
-					<h2>adres</h2>
+					<h2>adres:</h2>
 					<p>adresFirmy 43 32-100 adres</p>
 				</div>
 				<div>
-					<h2>Godziny pracy</h2>
+					<h2>Godziny pracy:</h2>
 					<p>PN-SOB 8-22</p>
 				</div>
 			</div>
