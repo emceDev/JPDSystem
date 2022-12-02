@@ -1,5 +1,6 @@
 .Post {
-	margin: 50px 111px 150px 111px;
+	margin: 50px 251px 150px 251px;
+	min-height: 500px;
 	h2 {
 		margin: 20px 0px 20px 10px;
 		text-transform: uppercase;
@@ -19,5 +20,22 @@
 	p {
 		text-align: justify;
 		font-size: 20px;
+		// padding-top: 60px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.Post {
+		margin: 50px 50px 150px 50px;
+		h2 {
+			font-size: 25px;
+			padding-left: 200px;
+			margin-bottom: 40px;
+		}
+	}
+	.ImgPCont {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 }

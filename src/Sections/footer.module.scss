@@ -31,3 +31,16 @@
 		padding: 1%;
 	}
 }
+@media only screen and (max-width: 900px) {
+	.Footer {
+		height: 40vh;
+		overflow: hidden;
+		.LogosContainer {
+			height: 100%;
+			flex-wrap: wrap;
+		}
+		.Logo {
+			height: auto;
+		}
+	}
+}

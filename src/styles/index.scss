@@ -6,3 +6,13 @@
 * {
 	margin: 0px;
 }
+@media only screen and (max-width: 900px) {
+	.App {
+		h2 {
+			font-size: 17px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+}

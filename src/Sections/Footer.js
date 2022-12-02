@@ -17,7 +17,7 @@ export const Footer = () => {
 			</div>
 			<div className={styles.LogosContainer}>
 				{logos.map((logo) => (
-					<div className={styles.Logo}>
+					<div className={styles.Logo} key={logo.name}>
 						<img src={logo.src} alt={logo.name} />
 					</div>
 				))}

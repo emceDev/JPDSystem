@@ -1,22 +1,49 @@
 import { useEffect, useState } from "react";
-import a from "../images/a.png";
-import b from "../images/b.png";
-import c from "../images/c.png";
-import d from "../images/d.png";
-import e from "../images/e.jpg";
+
 import styles from "./gallery.module.scss";
 import * as ReactDOM from "react-dom";
+import { ProjImage } from "./Image";
 const shortDesc =
 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 const images = [
-	{ src: a, title: "title1", desc: shortDesc },
-	{ src: b, title: "title2", desc: shortDesc },
-	{ src: c, title: "title3", desc: shortDesc },
-	{ src: d, title: "title4", desc: shortDesc },
-	{ src: e, title: "title5", desc: shortDesc },
-	{ src: b, title: "title2", desc: shortDesc },
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title1",
+		desc: shortDesc,
+	},
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title2",
+		desc: shortDesc,
+	},
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title3",
+		desc: shortDesc,
+	},
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title4",
+		desc: shortDesc,
+	},
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title5",
+		desc: shortDesc,
+	},
+	{
+		image: "./imgs/tree.webp ",
+		placeholder: " ./imgs/tree_placeholder",
+		title: "title2",
+		desc: shortDesc,
+	},
 ];
-export const Gallery = () => {
+const Gallery = () => {
 	const [choosen, setChoosen] = useState(false);
 	const [modalOpen, setOpen] = useState(false);
 
@@ -39,6 +66,7 @@ export const Gallery = () => {
 					<GalleryImg
 						img={img}
 						index={index}
+						key={index + img.title}
 						setChoosen={(index) => setChoosen(index)}
 					/>
 				))}
@@ -54,7 +82,7 @@ export const Gallery = () => {
 
 const GalleryImg = (props) => {
 	const [hover, setHover] = useState(false);
-	const { title, src } = props.img;
+	const { title, image, placeholder } = props.img;
 	return (
 		<div
 			className={styles.GalleryImg}
@@ -65,8 +93,18 @@ const GalleryImg = (props) => {
 			onClick={() => props.setChoosen(props.index)}
 		>
 			{hover && <h2>{title}</h2>}
-			<div className={styles.ImgCont}>
-				<img src={src}></img>
+			<div
+				className={styles.ImgCont}
+				style={{
+					filter: hover ? "grayscale(0)" : "grayscale(1)",
+					transition: "filter 0.5s",
+				}}
+			>
+				<ProjImage
+					id={title.eng + title + "img"}
+					image={image}
+					placeholder={placeholder}
+				/>
 			</div>
 		</div>
 	);
@@ -105,8 +143,10 @@ const Modal = (props) => {
 				<button onClick={() => props.close()}>{"x"}</button>
 			</div>
 			<div className={styles.ImgCont} onClick={(e) => e.stopPropagation()}>
-				<img src={images[index].src}></img>
+				<img src={images[index].image}></img>
 			</div>
 		</div>
 	);
 };
+
+export default Gallery;

@@ -1,10 +1,15 @@
 import styles from "./landing.module.scss";
-import img from "../images/b.png";
+
 import { ContactData } from "../Components/ContactData";
+import { ProjImage } from "../Components/Image";
 export const Landing = () => {
 	return (
 		<div className={styles.Landing}>
-			<img src={img} />
+			<ProjImage
+				id={"landingImage"}
+				image={"./imgs/b.png"}
+				placeholder={"./imgs/lco_placeholder.webp"}
+			/>
 			<LandImgTxt />
 			<Contact />
 		</div>
