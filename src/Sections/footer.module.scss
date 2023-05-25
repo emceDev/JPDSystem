@@ -3,12 +3,16 @@
 .Footer {
 	min-height: 40vh;
 	width: 100vw;
+	text-transform: uppercase;
 	// background-color: $gray;
 	background-color: $granatowy;
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	p {
+		font-size: 13px;
+	}
 }
 .Logo {
 	width: 200px;

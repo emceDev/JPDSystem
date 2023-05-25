@@ -8,13 +8,18 @@
 }
 .ImgPCont {
 	// background-color: darkorange;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	.ImgContainer {
-		// background-color: darkblue;
-		float: right;
-		margin: 0px 0px 5px 20px;
+		margin-bottom: 10px;
+
 		img {
-			width: 400px;
-			height: auto;
+		}
+		img {
+			max-width: 100%;
+			// width: 400px;
+			height: 50vh;
 		}
 	}
 	p {
@@ -26,9 +31,10 @@
 @media only screen and (max-width: 900px) {
 	.Post {
 		margin: 50px 50px 150px 50px;
+
 		h2 {
 			font-size: 25px;
-			padding-left: 200px;
+			padding-left: 10%;
 			margin-bottom: 40px;
 		}
 	}
@@ -37,5 +43,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.Post {
+		h2 {
+			margin-left: 0%;
+		}
 	}
 }

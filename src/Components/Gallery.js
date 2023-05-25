@@ -7,40 +7,40 @@ const shortDesc =
 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 const images = [
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele1.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title1",
-		desc: shortDesc,
+		title: "My w pracy",
+		desc: "Pasja i profesjonalizm w pracy nad domofonami: Bezpieczeństwo i wygoda w Twoim domu. My w pracy - elektrycy dbający o Twoje bezpieczeństwo i komfort",
 	},
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele2.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title2",
-		desc: shortDesc,
+		title: "Biały montaż",
+		desc: "Biały montaż: Doskonałość w instalacji sanitarno-elektrycznej. My w pracy - specjaliści dbający o jakość i wygodę Twojego domu",
 	},
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele3.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title3",
-		desc: shortDesc,
+		title: "Fotowoltaika",
+		desc: "Fotowoltaika: Zróbmy razem krok w kierunku zielonej energii. My w pracy - ekspert w instalacji i optymalizacji systemów fotowoltaicznych dla oszczędności i ochrony środowiska.",
 	},
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele4.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title4",
-		desc: shortDesc,
+		title: "Prąd stały",
+		desc: "Prąd stały: Nowoczesne rozwiązania dla Twojej infrastruktury elektrycznej. My w pracy - specjaliści w instalacji i utrzymaniu systemów prądu stałego, zapewniający niezawodność i efektywność energetyczną.",
 	},
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele5.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title5",
-		desc: shortDesc,
+		title: "Rozdzielnie",
+		desc: "Rozdzielnie: Solidne i funkcjonalne rozwiązania dla Twojej infrastruktury elektrycznej. My w pracy - specjaliści w projektowaniu, montażu i konserwacji rozdzielni, zapewniający bezpieczeństwo i optymalne zarządzanie energią.",
 	},
 	{
-		image: "./imgs/tree.webp ",
+		image: "./imgs/ele6.jpg ",
 		placeholder: " ./imgs/tree_placeholder",
-		title: "title2",
-		desc: shortDesc,
+		title: "Wysokie napięcia",
+		desc: "Wysokie napięcia: Profesjonalne rozwiązania dla złożonych systemów wysokonapięciowych. My w pracy - doświadczeni specjaliści w instalacji, modernizacji i diagnostyce systemów wysokiego napięcia, zapewniający bezpieczeństwo i niezawodność działania.",
 	},
 ];
 const Gallery = () => {
@@ -131,14 +131,14 @@ const Modal = (props) => {
 		<div className={styles.Modal} onClick={(e) => handleClick(e)}>
 			<div className={styles.Navs} onClick={(e) => e.stopPropagation()}>
 				<button onClick={() => (index - 1 > 0 ? setIndex(index - 1) : null)}>
-					<span class="material-symbols-outlined">arrow_back_ios_new</span>
+					<span class="material-symbols-outlined">{"<"}</span>
 				</button>
 				<button
 					onClick={() =>
 						index + 1 < images.length ? setIndex(index + 1) : null
 					}
 				>
-					<span class="material-symbols-outlined">arrow_forward_ios</span>
+					<span class="material-symbols-outlined">{">"} </span>
 				</button>
 				<button onClick={() => props.close()}>{"x"}</button>
 			</div>

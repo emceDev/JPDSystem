@@ -10,6 +10,7 @@ export const ProjImage = (props) => {
 		img.onload = () => {
 			setLoaded(true);
 			setSrc(img.src);
+			props.imageLoaded();
 		};
 	}, []);
 
@@ -20,8 +21,9 @@ export const ProjImage = (props) => {
 			style={{
 				filter: loaded ? "none" : "blur(10px)",
 				transition: "all 0.5s",
-				width: loaded ? "auto" : "100%",
-				height: loaded ? "auto" : "100%",
+				// width: loaded ? "auto" : "100%",
+				width: "100%",
+				// height: loaded ? "auto" : "100%",
 			}}
 		></img>
 	);

@@ -1,0 +1,43 @@
+.Contact {
+	width: 100vw;
+	height: 80vh;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 10vh;
+	.left {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		align-items: center;
+		margin-top: 10%;
+	}
+	.right {
+		width: 55%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.Map {
+			height: 90%;
+			width: 90%;
+			border: 0px;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.Contact {
+		padding-top: 1vh;
+		padding-bottom: 11vh;
+		height: auto;
+		.left {
+			width: 70%;
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

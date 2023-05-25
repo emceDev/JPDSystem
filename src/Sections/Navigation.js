@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDeviceDetector } from "../Components/deviceDetector";
+import { HamburgerSvg } from "../svgs/hamburger";
 import styles from "./navigation.module.scss";
 export const Navigation = () => {
 	const [expanded, setExpanded] = useState(true);
 	const [mobile, setMobile] = useState(true);
 	const [mobileShown, setMobileShown] = useState(false);
+	const device = useDeviceDetector();
 	useEffect(() => {
 		window.document.addEventListener("scroll", () => {
 			const navigation = window.document.getElementById("navigation");
 
 			navigation.style.height = "9vh";
 		});
-		setMobile(window.innerWidth < 900);
 	}, []);
 
 	return (
@@ -27,30 +29,30 @@ export const Navigation = () => {
 					<h1>JPDSystem</h1>
 				</Link>
 			</div>
-			{mobile ? (
-				<div style={{ position: "relative" }}>
-					<span
-						class="material-symbols-outlined"
-						onClick={() => setMobileShown(!mobileShown)}
-						style={{ position: "relative", color: "white" }}
-					>
-						menu
+			{device === "Mobile" ? (
+				<>
+					<span onClick={() => setMobileShown(!mobileShown)}>
+						<HamburgerSvg />
 					</span>
 					{mobileShown ? (
-						<div className={styles.Dropdown}>
-							<Buttons />
+						<div
+							className={styles.Dropdown}
+							onClick={() => setMobileShown(!mobileShown)}
+						>
+							<Buttons device={device} />
 						</div>
 					) : null}
-				</div>
+				</>
 			) : (
 				<Buttons />
 			)}
 		</div>
 	);
 };
-const Buttons = () => {
+const Buttons = (props) => {
 	return (
 		<div className={styles.Buttons}>
+			{props.device === "Mobile" && <h1>JPDSystems</h1>}
 			<Link to="/Domofony">
 				<button>Domofony</button>
 			</Link>

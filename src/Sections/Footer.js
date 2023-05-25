@@ -1,12 +1,15 @@
 import { ContactData } from "../Components/ContactData";
 import styles from "./footer.module.scss";
-import a from "../images/b.png";
+// import logo4 from "./imgs/logo1.png";
+// import logo1 from "./imgs/logo1.png";
+// import logo2 from "./imgs/logo2.png";
+// import logo3 from "./imgs/logo3.png";
 
 const logos = [
-	{ src: a, name: "facebook" },
-	{ src: a, name: "facebook1" },
-	{ src: a, name: "facebook2" },
-	{ src: a, name: "facebook3" },
+	{ src: "./imgs/logo1.png", name: "logo1" },
+	{ src: "./imgs/logo2.png", name: "logo2" },
+	{ src: "./imgs/logo3.png", name: "logo3" },
+	{ src: "./imgs/logo4.png", name: "logo4" },
 ];
 
 export const Footer = () => {
